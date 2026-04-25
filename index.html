@@ -1,60 +1,66 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankalya | Çok Yakında</title>
+    <title>Ankalya | Coming Soon</title>
     <style>
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #1a1a1a; color: white; margin: 0; display: flex; flex-direction: column; align-items: center; }
-        .header { padding: 60px 20px; text-align: center; }
-        h1 { font-size: 3.5rem; letter-spacing: 8px; margin: 0; color: #fff; }
-        p { font-size: 1.1rem; color: #888; margin-top: 10px; }
-        
-        /* Fotoğraf Galerisi */
-        .gallery { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 15px; 
-            width: 90%; 
-            max-width: 1200px; 
-            padding-bottom: 50px;
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Logonun temiz arka planına benzer hafif gri/beyaz */
+            background-color: #fefefe; 
         }
-        .gallery img { 
-            width: 100%; 
-            height: 250px; 
-            object-fit: cover; 
-            border-radius: 8px; 
-            filter: grayscale(50%);
-            transition: 0.3s;
+
+        .coming-soon-container {
+            text-align: center;
+            padding: 20px;
         }
-        .gallery img:hover { filter: grayscale(0%); transform: scale(1.03); }
-        
-        .footer { padding: 30px; font-size: 0.9rem; color: #555; }
+
+        .logo {
+            max-width: 280px; /* Logonun boyutu */
+            height: auto;
+            margin-bottom: 20px; /* Metinle logo arası boşluk */
+        }
+
+        h1 {
+            /* Logonun mavisini taklit eden bir renk */
+            color: #03649e; 
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 5px; /* Harf arası boşluk, modern durur */
+        }
+
+        h2 {
+            color: #666; /* Daha açık gri */
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #888;
+        }
     </style>
 </head>
 <body>
 
-    <div class="header">
+    <div class="coming-soon-container">
+        <img src="image_4.png" alt="Ankalya Logo" class="logo">
         <h1>ANKALYA</h1>
-        <p>Yaratıcı projelerimizle çok yakında buradayız.</p>
-    </div>
-
-    <div class="gallery" id="gallery">
+        <h2>COMING SOON</h2>
+        
+        <div class="footer">
+            info@ankalya.tr
         </div>
-
-    <div class="footer">
-        &copy; 2026 Ankalya. Tüm hakları saklıdır. | info@ankalya.tr
     </div>
 
-    <script>
-        // 1.jpeg'den 11.jpeg'e kadar olan fotoğrafları döngüyle ekleyelim
-        const galleryDiv = document.getElementById('gallery');
-        for (let i = 1; i <= 11; i++) {
-            const img = document.createElement('img');
-            img.src = i + '.jpeg';
-            img.alt = 'Ankalya Proje ' + i;
-            galleryDiv.appendChild(img);
-        }
-    </script>
 </body>
 </html>
