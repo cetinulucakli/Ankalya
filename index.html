@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankalya | Çok Yakında</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #1a1a1a; color: white; margin: 0; display: flex; flex-direction: column; align-items: center; }
+        .header { padding: 60px 20px; text-align: center; }
+        h1 { font-size: 3.5rem; letter-spacing: 8px; margin: 0; color: #fff; }
+        p { font-size: 1.1rem; color: #888; margin-top: 10px; }
+        
+        /* Fotoğraf Galerisi */
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px; 
+            width: 90%; 
+            max-width: 1200px; 
+            padding-bottom: 50px;
+        }
+        .gallery img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            filter: grayscale(50%);
+            transition: 0.3s;
+        }
+        .gallery img:hover { filter: grayscale(0%); transform: scale(1.03); }
+        
+        .footer { padding: 30px; font-size: 0.9rem; color: #555; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>ANKALYA</h1>
+        <p>Yaratıcı projelerimizle çok yakında buradayız.</p>
+    </div>
+
+    <div class="gallery" id="gallery">
+        </div>
+
+    <div class="footer">
+        &copy; 2026 Ankalya. Tüm hakları saklıdır. | info@ankalya.tr
+    </div>
+
+    <script>
+        // 1.jpeg'den 11.jpeg'e kadar olan fotoğrafları döngüyle ekleyelim
+        const galleryDiv = document.getElementById('gallery');
+        for (let i = 1; i <= 11; i++) {
+            const img = document.createElement('img');
+            img.src = i + '.jpeg';
+            img.alt = 'Ankalya Proje ' + i;
+            galleryDiv.appendChild(img);
+        }
+    </script>
+</body>
+</html>
