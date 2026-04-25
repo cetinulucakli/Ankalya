@@ -3,62 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankalya | Coming Soon</title>
+    <title>Ankalya</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #fefefe; 
-        }
-
-        .coming-soon-container {
-            text-align: center;
-            padding: 20px;
+            background-color: #fefefe;
+            overflow: hidden; /* Kaydırma çubuğu çıkmasın diye */
         }
 
         .logo {
-            max-width: 320px; 
+            width: 90%; /* Sayfayı kaplayacak büyüklük */
+            max-width: 1000px; /* Çok aşırı yayılmaması için üst sınır */
             height: auto;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: #03649e; 
-            font-size: 3rem;
-            margin: 0;
-            letter-spacing: 5px;
         }
 
         h2 {
+            font-family: sans-serif;
             color: #666;
-            font-size: 1.2rem;
-            margin-top: 10px;
+            font-size: 1.5rem;
+            letter-spacing: 15px; /* Daha modern bir görünüm için harf arası açık */
+            margin-top: 50px;
             font-weight: 300;
-            letter-spacing: 2px;
-        }
-
-        .footer {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #888;
         }
     </style>
 </head>
 <body>
 
-    <div class="coming-soon-container">
-        <img src="Logo.jpg" alt="Ankalya Logo" class="logo">
-        <h1>ANKALYA</h1>
-        <h2>COMING SOON</h2>
-        
-        <div class="footer">
-            info@ankalya.tr
-        </div>
-    </div>
+    <img src="Logo.jpg" alt="Logo" class="logo">
+    
+    <h2>COMING SOON</h2>
 
 </body>
 </html>
