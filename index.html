@@ -1,42 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankalya</title>
+    <title>Ankalya | Your Home in Antalya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #fefefe;
-            overflow: hidden; /* Kaydırma çubuğu çıkmasın diye */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
+        .navbar-brand img { height: 60px; }
+        .hero-section {
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1542314831-c53cd4b85ca4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
         }
-
-        .logo {
-            width: 90%; /* Sayfayı kaplayacak büyüklük */
-            max-width: 1000px; /* Çok aşırı yayılmaması için üst sınır */
-            height: auto;
+        .section-title { color: #003366; font-weight: bold; margin-bottom: 40px; text-transform: uppercase; }
+        .apartment-card { transition: transform 0.3s; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .apartment-card:hover { transform: translateY(-5px); }
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
+            background-color: #25d366; color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100;
+            display: flex; align-items: center; justify-content: center; text-decoration: none;
         }
-
-        h2 {
-            font-family: sans-serif;
-            color: #666;
-            font-size: 1.5rem;
-            letter-spacing: 15px; /* Daha modern bir görünüm için harf arası açık */
-            margin-top: 50px;
-            font-weight: 300;
-        }
+        .whatsapp-float:hover { color: #fff; background-color: #128C7E; }
+        .lang-select { background-color: transparent; border: 1px solid #003366; color: #003366; padding: 5px; border-radius: 5px; }
     </style>
 </head>
 <body>
 
-    <img src="Logo.jpg" alt="Logo" class="logo">
-    
-    <h2>COMING SOON</h2>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/static/Logo.jpg" alt="Ankalya Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#apartments">Dairelerimiz</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#reviews">Yorumlar</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#contact">İletişim</a></li>
+                    <li class="nav-item ms-3">
+                        <select class="lang-select" id="languageSelector">
+                            <option value="tr">TR - Türkçe</option>
+                            <option value="en">EN - English</option>
+                            <option value="de">DE - Deutsch</option>
+                            <option value="fr">FR - Français</option>
+                            <option value="ru">RU - Русский</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">ANKALYA</h1>
+            <p class="lead fs-2 mb-5">Your Home in Antalya</p>
+            <a href="#apartments" class="btn btn-light btn-lg text-primary fw-bold px-5 py-3">Rezervasyon Yap</a>
+        </div>
+    </section>
+
+    <section id="apartments" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Seçkin Dairelerimiz</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card apartment-card h-100">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&q=80" class="card-img-top" alt="Anka 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-primary">Anka 3</h5>
+                            <p class="card-text text-muted">Merkezi konum, lüks eşyalar ve sınırsız konfor.</p>
+                            <ul class="list-unstyled d-flex justify-content-center gap-3 text-secondary mb-3">
+                                <li><i class="fas fa-bed"></i> 2 Yatak</li>
+                                <li><i class="fas fa-bath"></i> 1 Banyo</li>
+                                <li><i class="fas fa-wifi"></i> WiFi</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" onclick="checkAvailability('Anka 3')">Uygunluğu Kontrol Et</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card apartment-card h-100">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1e5491176b?w=500&q=80" class="card-img-top" alt="Anka 5">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-primary">Anka 5</h5>
+                            <p class="card-text text-muted">Aileniz için geniş ve ferah yaşam alanı.</p>
+                            <button class="btn btn-outline-primary w-100" onclick="checkAvailability('Anka 5')">Uygunluğu Kontrol Et</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card apartment-card h-100">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80" class="card-img-top" alt="Anka 24">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-primary">Anka 24</h5>
+                            <p class="card-text text-muted">Modern tasarım, eşsiz şehir manzarası.</p>
+                            <button class="btn btn-outline-primary w-100" onclick="checkAvailability('Anka 24')">Uygunluğu Kontrol Et</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/905550000000?text=Merhaba,%20rezervasyon%20hakkında%20bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank" title="WhatsApp'tan Bize Ulaşın">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer id="contact" class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <h4 class="mb-3">İletişim</h4>
+            <p><i class="fas fa-envelope"></i> info@ankalya.tr | <i class="fas fa-phone"></i> +90 555 000 00 00</p>
+            <p class="mb-0 mt-3 text-secondary">&copy; 2026 Ankalya. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Müşterinin rezervasyon talebi için geçici yönlendirme/uyarı mantığı
+        function checkAvailability(aptName) {
+            alert(aptName + " için uygunluk kontrol sistemi ve dil seçeneği altyapısı bir sonraki aşamada entegre edilecektir. Lütfen şimdilik WhatsApp üzerinden iletişime geçin.");
+        }
+    </script>
 </body>
 </html>
