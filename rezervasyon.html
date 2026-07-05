@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rezervasyon Ön Onay Talebi | Ankalya</title>
+<meta name="description" content="Ankalya evleri için tarihlerinizi gönderin, ön onay talebiniz ekibimize ulaşsın.">
+<link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="promo-bar">Bu bir <strong>ön onay</strong> talebidir — ödeme alınmaz, ekibimiz size dönüş yapıp onaylar.</div>
+  <div class="nav-row">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
+      <div class="brand-text">
+        <span class="logo-word">Ankalya</span>
+        <span class="tagline">YOUR HOME IN ANTALYA</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="evlerimiz.html">Evlerimiz</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="sss.html">SSS</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="rezervasyon.html" class="nav-cta active">Rezervasyon Talebi</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menü">☰</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:44px 0 36px;">
+  <div class="container">
+    <h1 style="font-size:32px;">Rezervasyon Ön Onay Talebi</h1>
+    <p class="lead">Tarihlerinizi ve iletişim bilgilerinizi gönderin — ekibimiz müsaitliği kontrol edip 24 saat içinde size dönüş yapsın. Bu aşamada herhangi bir ödeme alınmaz.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:16px;">
+  <div class="container">
+    <form id="booking-form" class="form-card">
+      <div class="form-row">
+        <label for="apt">Hangi ev?</label>
+        <select id="apt" name="apartment" required>
+          <option value="">Seçiniz</option>
+          <option value="ankalya-1">Ankalya 1</option>
+          <option value="ankalya-3">Ankalya 3</option>
+          <option value="ankalya-5">Ankalya 5</option>
+          <option value="ankalya-7">Ankalya 7</option>
+          <option value="ankalya-24">Ankalya 24</option>
+          <option value="belirsiz">Emin değilim / hepsini göster</option>
+        </select>
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label for="checkin">Giriş Tarihi</label>
+          <input type="date" id="checkin" name="checkin" required>
+        </div>
+        <div>
+          <label for="checkout">Çıkış Tarihi</label>
+          <input type="date" id="checkout" name="checkout" required>
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label for="guests">Misafir Sayısı</label>
+          <input type="number" id="guests" name="guests" min="1" max="12" value="2" required>
+        </div>
+        <div>
+          <label for="phone">Telefon / WhatsApp</label>
+          <input type="tel" id="phone" name="phone" placeholder="+90 5xx xxx xx xx" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="name">Ad Soyad</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">E-posta</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-row">
+        <label for="note">Eklemek istediğiniz bir şey var mı?</label>
+        <textarea id="note" name="note" rows="4" placeholder="Özel bir talebiniz varsa buraya yazabilirsiniz"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%;">Ön Onay Talebini Gönder</button>
+      <p class="form-note">Gönderdiğiniz bilgiler yalnızca rezervasyon talebinizi değerlendirmek için kullanılır, üçüncü taraflarla paylaşılmaz.</p>
+      <div id="form-msg"></div>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;">
+          <img src="assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
+          <div class="brand-text"><span class="logo-word" style="color:#fff;">Ankalya</span></div>
+        </div>
+        <p style="color:#b7b0a4;font-size:14px;max-width:280px;">Antalya Muratpaşa'da, şehrin kalbinde 5 özenle hazırlanmış tatil evi.</p>
+      </div>
+      <div>
+        <h4>Evlerimiz</h4>
+        <a href="evler/ankalya-3.html">Ankalya 3</a>
+        <a href="evler/ankalya-5.html">Ankalya 5</a>
+        <a href="evler/ankalya-24.html">Ankalya 24</a>
+        <a href="evler/ankalya-1.html">Ankalya 1</a>
+        <a href="evler/ankalya-7.html">Ankalya 7</a>
+      </div>
+      <div>
+        <h4>Kurumsal</h4>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="sss.html">Sıkça Sorulan Sorular</a>
+        <a href="iletisim.html">İletişim</a>
+      </div>
+      <div>
+        <h4>İletişim</h4>
+        <a href="mailto:info@ankalya.tr">info@ankalya.tr</a>
+        <a href="iletisim.html">WhatsApp &amp; Telefon</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ankalya. Tüm hakları saklıdır.</span>
+      <span>Muratpaşa, Antalya</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // ?apt= parametresi varsa formda ön secili yap
+  const params = new URLSearchParams(window.location.search);
+  const aptParam = params.get("apt");
+  if (aptParam) {
+    const sel = document.getElementById("apt");
+    if (sel && [...sel.options].some(o => o.value === aptParam)) sel.value = aptParam;
+  }
+</script>
+</body>
+</html>

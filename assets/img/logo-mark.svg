@@ -1,0 +1,12 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ankalya">
+  <circle cx="60" cy="60" r="58" fill="#f3e6d3"/>
+  <circle cx="60" cy="42" r="15" fill="#e08a3c"/>
+  <line x1="60" y1="18" x2="60" y2="8" stroke="#e08a3c" stroke-width="3" stroke-linecap="round"/>
+  <line x1="77" y1="25" x2="84" y2="18" stroke="#e08a3c" stroke-width="3" stroke-linecap="round"/>
+  <line x1="43" y1="25" x2="36" y2="18" stroke="#e08a3c" stroke-width="3" stroke-linecap="round"/>
+  <clipPath id="logoClip"><circle cx="60" cy="60" r="58"/></clipPath>
+  <g clip-path="url(#logoClip)">
+    <path d="M10 78 Q30 68 60 78 T110 78" fill="none" stroke="#1f6f78" stroke-width="6" stroke-linecap="round"/>
+    <path d="M10 90 Q30 82 60 90 T110 90" fill="none" stroke="#1f6f78" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  </g>
+</svg>
