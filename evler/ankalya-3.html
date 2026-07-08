@@ -44,10 +44,13 @@
 
 <section>
   <div class="container">
-    <div class="gallery-grid">
-      <a href="../assets/img/anka3/anka3-01.jpg" target="_blank" style="grid-column: span 2; grid-row: span 2;">
-        <img src="../assets/img/anka3/anka3-01.jpg" alt="Ankalya 3 - genel görünüm" style="height:100%;">
+    <div class="gallery-hero">
+      <a href="../assets/img/anka3/anka3-15.jpg" target="_blank">
+        <img src="../assets/img/anka3/anka3-15.jpg" alt="Ankalya 3 - genel görünüm">
       </a>
+    </div>
+    <div class="gallery-scroll">
+      <a href="../assets/img/anka3/anka3-01.jpg" target="_blank"><img src="../assets/img/anka3/anka3-01.jpg" alt="Ankalya 3 - iç mekan"></a>
       <a href="../assets/img/anka3/anka3-02.jpg" target="_blank"><img src="../assets/img/anka3/anka3-02.jpg" alt="Ankalya 3 - iç mekan"></a>
       <a href="../assets/img/anka3/anka3-03.jpg" target="_blank"><img src="../assets/img/anka3/anka3-03.jpg" alt="Ankalya 3 - iç mekan"></a>
       <a href="../assets/img/anka3/anka3-04.jpg" target="_blank"><img src="../assets/img/anka3/anka3-04.jpg" alt="Ankalya 3 - iç mekan"></a>
@@ -61,7 +64,6 @@
       <a href="../assets/img/anka3/anka3-12.jpg" target="_blank"><img src="../assets/img/anka3/anka3-12.jpg" alt="Ankalya 3 - iç mekan"></a>
       <a href="../assets/img/anka3/anka3-13.jpg" target="_blank"><img src="../assets/img/anka3/anka3-13.jpg" alt="Ankalya 3 - iç mekan"></a>
       <a href="../assets/img/anka3/anka3-14.jpg" target="_blank"><img src="../assets/img/anka3/anka3-14.jpg" alt="Ankalya 3 - iç mekan"></a>
-      <a href="../assets/img/anka3/anka3-15.jpg" target="_blank"><img src="../assets/img/anka3/anka3-15.jpg" alt="Ankalya 3 - iç mekan"></a>
       <a href="../assets/img/anka3/anka3-16.jpg" target="_blank"><img src="../assets/img/anka3/anka3-16.jpg" alt="Ankalya 3 - iç mekan"></a>
       <a href="../assets/img/anka3/anka3-17.jpg" target="_blank"><img src="../assets/img/anka3/anka3-17.jpg" alt="Ankalya 3 - iç mekan"></a>
       <a href="../assets/img/anka3/anka3-18.jpg" target="_blank"><img src="../assets/img/anka3/anka3-18.jpg" alt="Ankalya 3 - iç mekan"></a>
@@ -82,6 +84,7 @@
     <p>Ankalya 3'te kaldığınız süre boyunca Muratpaşa'nın sunduğu her şeyi keşfedin. İki yatak odalı, balkonlu bu şık daire; şehir merkezine ve tarihi Hadrian Kapısı'na yürüme mesafesindeki konumuyla hem tatilciler hem de iş seyahati yapan misafirler için ideal bir seçim. Resepsiyonumuz Türkçe ve İngilizce olmak üzere 2 dilde hizmet vermektedir. Ekstra konfor için bavul depolama ve ücretsiz çamaşırhane hizmetlerinden yararlanabilir, arabanızla geliyorsanız otoparkımızı kullanabilirsiniz.</p>
 
     <h2 style="font-size:22px;margin-top:32px;"><span data-i18n="section_amenities">Olanaklar</span></h2>
+    <div class="amenity-wrap" id="amenities-wrap">
     <div class="amenity-grid">
       <div class="amenity-item"><span class="dot"></span> Ücretsiz otopark</div>
       <div class="amenity-item"><span class="dot"></span> Ortak alanlarda ücretsiz Wi-Fi</div>
@@ -96,6 +99,8 @@
       <div class="amenity-item"><span class="dot"></span> İlk yardım seti, yangın söndürücü, duman dedektörü</div>
       <div class="amenity-item"><span class="dot"></span> Ortak alanlarda güvenlik kamerası</div>
     </div>
+    </div>
+    <button class="amenity-toggle-btn" data-target="amenities-wrap"><span class="label">Daha fazlasını göster</span> <span class="chev">▾</span></button>
 
     <h2 style="font-size:22px;margin-top:32px;"><span data-i18n="section_know_before">Bilmeniz Gerekenler</span></h2>
     <div class="amenity-grid">
@@ -108,14 +113,15 @@
   </div>
 
   <aside>
+    <div class="review-badge" onclick="document.getElementById('reviews-section').scrollIntoView({behavior:'smooth'})"><div class="rb-score">4,83</div><div class="rb-text"><strong>Misafirlerin favorisi</strong><br>5 üzerinden</div></div>
     <div class="avail-card">
       <h3 style="font-size:17px;"><span data-i18n="section_availability">Canlı Müsaitlik</span></h3>
       <div id="avail-widget" data-apt="ankalya-3">
         <div class="avail-status"><span class="avail-dot loading"></span> <span data-i18n="loading">Yükleniyor...</span></div>
         <div id="avail-calendar"></div>
         <div class="avail-legend">
-          <span><span class="sw sw-free"></span data-i18n="legend_free"> Müsait</span>
-          <span><span class="sw sw-busy"></span data-i18n="legend_busy"> Dolu</span>
+          <span><span class="sw sw-free"></span> <span data-i18n="legend_free">Müsait</span></span>
+          <span><span class="sw sw-busy"></span> <span data-i18n="legend_busy">Dolu</span></span>
         </div>
       </div>
       <a href="../rezervasyon.html?apt=ankalya-3" class="btn btn-primary" style="width:100%;text-align:center;margin-top:18px;"><span data-i18n="btn_send_request">Bu Ev İçin Ön Onay Talebi Gönder</span></a>
@@ -125,26 +131,16 @@
 </section>
 
 
-<section class="section" style="padding-top:0;">
+<section class="section" style="padding-top:0;" id="reviews-section">
   <div class="container">
     <h2 style="font-size:22px;margin-bottom:16px;"><span data-i18n="section_reviews">Misafir Yorumları</span></h2>
-    <div class="review-summary">
-      <div>
-        <div class="score">4,83 / 5</div>
-        <div class="score-sub">Airbnb üzerinde "Misafirlerin favorisi"</div>
-      </div>
-      <div class="platform-badges">
-        <span class="platform-badge airbnb">Airbnb</span>
-        <span class="platform-badge booking">Booking.com</span>
-      </div>
-    </div>
     <div class="review-grid">
       <div class="review-card">
         <div class="rhead">
           <div class="reviewer"><span class="flag">🇹🇷</span> Sedat</div>
           <div class="rscore">5/5</div>
         </div>
-        <div class="rmeta">Türkiye · Mayıs 2026 · <span class="rplatform airbnb">Airbnb</span></div>
+        <div class="rmeta">Türkiye · Mayıs 2026</div>
         <div class="rtext">Antalya merkezde. Kale içine 10 dk. Yürüyüş mesafesinde. Evde herşey düşünülmüş. Hiç bir eksik yok. Ferah ve huzurlu. Kesinlikle tekrar kalınır.</div>
       </div>
       <div class="review-card">
@@ -152,7 +148,7 @@
           <div class="reviewer"><span class="flag">🇫🇷</span> Rayanne</div>
           <div class="rscore">5/5</div>
         </div>
-        <div class="rmeta">Fransa · 2 hafta önce · <span class="rplatform airbnb">Airbnb</span></div>
+        <div class="rmeta">Fransa · 2 hafta önce</div>
         <div class="rtext">Je recommande ce logement à 100 % ! Il est encore plus agréable en réalité que sur les photos. L'hôte est très réactif, à l'écoute et partage d'excellentes recommandations. L'appartement était impeccable, parfaitement propre.</div>
       </div>
       <div class="review-card">
@@ -160,7 +156,7 @@
           <div class="reviewer"><span class="flag">🇹🇷</span> Bilal</div>
           <div class="rscore">5/5</div>
         </div>
-        <div class="rmeta">İstanbul, Türkiye · Mayıs 2026 · <span class="rplatform airbnb">Airbnb</span></div>
+        <div class="rmeta">İstanbul, Türkiye · Mayıs 2026</div>
         <div class="rtext">Her şey çok güzeldi. Evin içi tertemiz kullanabileceğiniz eşyalara kadar düşünülmüş kesinlikle tavsiye ederim.</div>
       </div>
       <div class="review-card">
@@ -168,7 +164,7 @@
           <div class="reviewer"><span class="flag">🇹🇷</span> Mehmet</div>
           <div class="rscore">5/5</div>
         </div>
-        <div class="rmeta">Tekirdağ, Türkiye · Nisan 2026 · <span class="rplatform airbnb">Airbnb</span></div>
+        <div class="rmeta">Tekirdağ, Türkiye · Nisan 2026</div>
         <div class="rtext">Çetin bey çok iyi bir ev sahibi, ev çok temiz duzenli ve konumu cok güzel bir noktaydi.</div>
       </div>
       <div class="review-card">
@@ -176,7 +172,7 @@
           <div class="reviewer"><span class="flag">🇹🇷</span> Sai̇d Togan</div>
           <div class="rscore">5/5</div>
         </div>
-        <div class="rmeta">Çağlarca, Türkiye · Nisan 2026 · <span class="rplatform airbnb">Airbnb</span></div>
+        <div class="rmeta">Çağlarca, Türkiye · Nisan 2026</div>
         <div class="rtext">Ev konfor, temizlik ve bir çok açıdan harikaydı. Her şey düşünerek hazırlanmış. Çok memnun kaldık kesinlikle tavsiye ederiz.</div>
       </div>
       <div class="review-card">
@@ -184,7 +180,7 @@
           <div class="reviewer"><span class="flag">🇹🇷</span> Mehmet Ali</div>
           <div class="rscore">4/5</div>
         </div>
-        <div class="rmeta">Türkiye · Nisan 2026 · <span class="rplatform airbnb">Airbnb</span></div>
+        <div class="rmeta">Türkiye · Nisan 2026</div>
         <div class="rtext">Her şey beklediğimiz gibiydi iyi düşünülmüştü.</div>
       </div>
     </div>

@@ -9,7 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaq();
   initAvailability();
   initBookingForm();
+  initAmenityToggle();
 });
+
+function initAmenityToggle() {
+  document.querySelectorAll(".amenity-toggle-btn").forEach((btn) => {
+    const wrap = document.getElementById(btn.dataset.target);
+    if (!wrap) return;
+    const label = btn.querySelector(".label");
+    btn.addEventListener("click", () => {
+      const expanded = wrap.classList.toggle("expanded");
+      btn.classList.toggle("open", expanded);
+      label.textContent = expanded ? "Daha az göster" : "Daha fazlasını göster";
+    });
+  });
+}
 
 function initNav() {
   const toggle = document.querySelector(".nav-toggle");

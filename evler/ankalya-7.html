@@ -54,14 +54,15 @@
   </div>
 
   <aside>
+    <div class="review-badge" onclick="document.getElementById('reviews-section').scrollIntoView({behavior:'smooth'})"><div class="rb-score">9,8</div><div class="rb-text"><strong>Olağanüstü</strong><br>12 değerlendirme</div></div>
     <div class="avail-card">
       <h3 style="font-size:17px;"><span data-i18n="section_availability">Canlı Müsaitlik</span></h3>
       <div id="avail-widget" data-apt="ankalya-7">
         <div class="avail-status"><span class="avail-dot loading"></span> <span data-i18n="loading">Yükleniyor...</span></div>
         <div id="avail-calendar"></div>
         <div class="avail-legend">
-          <span><span class="sw sw-free"></span data-i18n="legend_free"> Müsait</span>
-          <span><span class="sw sw-busy"></span data-i18n="legend_busy"> Dolu</span>
+          <span><span class="sw sw-free"></span> <span data-i18n="legend_free">Müsait</span></span>
+          <span><span class="sw sw-busy"></span> <span data-i18n="legend_busy">Dolu</span></span>
         </div>
       </div>
       <a href="../rezervasyon.html?apt=ankalya-7" class="btn btn-primary" style="width:100%;text-align:center;margin-top:18px;"><span data-i18n="btn_send_request">Bu Ev İçin Ön Onay Talebi Gönder</span></a>
@@ -71,26 +72,16 @@
 </section>
 
 
-<section class="section" style="padding-top:0;">
+<section class="section" style="padding-top:0;" id="reviews-section">
   <div class="container">
     <h2 style="font-size:22px;margin-bottom:16px;"><span data-i18n="section_reviews">Misafir Yorumları</span></h2>
-    <div class="review-summary">
-      <div>
-        <div class="score">9,8 / 10</div>
-        <div class="score-sub">Booking.com üzerinde 12 değerlendirme · Olağanüstü</div>
-      </div>
-      <div class="platform-badges">
-        <span class="platform-badge airbnb">Airbnb</span>
-        <span class="platform-badge booking">Booking.com</span>
-      </div>
-    </div>
     <div class="review-grid">
       <div class="review-card">
         <div class="rhead">
           <div class="reviewer"><span class="flag">🇩🇪</span> Petra</div>
           <div class="rscore">10/10</div>
         </div>
-        <div class="rmeta">Almanya · Haziran 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rmeta">Almanya · Haziran 2026</div>
         <div class="rtext">Ich habe schon viele Ferienwohnungen besucht, doch diese war mit Abstand die Beste. Der Gastgeber war sehr höflich, freundlich und zuvorkommend, danke Mehmet!!! Hier wurde wirklich an alles gedacht.</div>
       </div>
       <div class="review-card">
@@ -98,7 +89,7 @@
           <div class="reviewer"><span class="flag">🇺🇸</span> Elizabeth</div>
           <div class="rscore">10/10</div>
         </div>
-        <div class="rmeta">ABD · Mayıs 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rmeta">ABD · Mayıs 2026</div>
         <div class="rtext">Wonderful apartment for a great value! The apartment was super cute and spacious. The kitchen had everything we needed. We loved our stay!</div>
       </div>
       <div class="review-card">
@@ -106,7 +97,7 @@
           <div class="reviewer"><span class="flag">🇩🇪</span> Ezgi</div>
           <div class="rscore">10/10</div>
         </div>
-        <div class="rmeta">Almanya · Temmuz 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rmeta">Almanya · Temmuz 2026</div>
         <div class="rtext">We had a wonderful stay! The apartment was spotlessly clean, beautifully decorated, and had everything we needed for a comfortable stay.</div>
       </div>
       <div class="review-card">
@@ -114,7 +105,7 @@
           <div class="reviewer"><span class="flag">🇿🇦</span> Shabnam</div>
           <div class="rscore">10/10</div>
         </div>
-        <div class="rmeta">Güney Afrika · Haziran 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rmeta">Güney Afrika · Haziran 2026</div>
         <div class="rtext">The apartment is well equipped with everything you need and more. The location is quite central and about 10min by car to old town.</div>
       </div>
       <div class="review-card">
@@ -122,7 +113,7 @@
           <div class="reviewer"><span class="flag">🇨🇭</span> Mykhailo</div>
           <div class="rscore">10/10</div>
         </div>
-        <div class="rmeta">İsviçre · Nisan 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rmeta">İsviçre · Nisan 2026</div>
         <div class="rtext">Хороший ремонт, быстрая помощь хозяина, а также очень комфортная атмосфера.</div>
       </div>
       <div class="review-card">
@@ -130,7 +121,7 @@
           <div class="reviewer"><span class="flag">🇸🇦</span> Zaki</div>
           <div class="rscore">10/10</div>
         </div>
-        <div class="rmeta">Suudi Arabistan · Mayıs 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rmeta">Suudi Arabistan · Mayıs 2026</div>
         <div class="rtext">الشقة نظيفة جدا وحلوة ومرتبة، ويوجد أيضا مطبخ وجميع الأوازم موجودة في الشقة وكل شيء قريب من الموقع، وصاحب الشقة محترم جدا وله جزيل الشكر.</div>
       </div>
     </div>
