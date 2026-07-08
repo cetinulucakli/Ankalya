@@ -11,7 +11,58 @@ document.addEventListener("DOMContentLoaded", () => {
   initBookingForm();
   initAmenityToggle();
   initGalleryThumbs();
+  initReviewTranslate();
 });
+
+// ---------- Misafir yorumlarını çevir ----------
+// Ücretsiz, resmi olmayan (dökümante edilmemiş) bir Google Translate uç noktası
+// kullanılır; API anahtarı/ücret gerektirmez ama Google tarafından garanti
+// edilmediğinden ileride durabilir — o durumda buton nazikçe hata mesajı gösterir.
+function initReviewTranslate() {
+  document.querySelectorAll(".review-card .rtext").forEach((rtext) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "review-translate-btn";
+    btn.textContent = "🌐 Çevir";
+
+    const out = document.createElement("div");
+    out.className = "review-translated";
+    out.style.display = "none";
+
+    rtext.insertAdjacentElement("afterend", out);
+    rtext.insertAdjacentElement("afterend", btn);
+
+    btn.addEventListener("click", async () => {
+      if (out.dataset.translated === "1") {
+        const showing = out.style.display !== "none";
+        out.style.display = showing ? "none" : "block";
+        btn.textContent = showing ? "🌐 Çevir" : "↩ Orijinali göster";
+        return;
+      }
+      const targetLang = (localStorage.getItem("ankalya_lang") || "tr").split("-")[0];
+      btn.disabled = true;
+      btn.textContent = "Çevriliyor...";
+      try {
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${encodeURIComponent(targetLang)}&dt=t&q=${encodeURIComponent(rtext.textContent)}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("çeviri başarısız");
+        const data = await res.json();
+        const translated = data[0].map((chunk) => chunk[0]).join("");
+        out.textContent = translated;
+        out.dataset.translated = "1";
+        out.style.display = "block";
+        btn.textContent = "↩ Orijinali göster";
+      } catch (err) {
+        btn.textContent = "🌐 Çevir";
+        out.textContent = "Çeviri şu anda yapılamadı, lütfen tekrar deneyin.";
+        out.style.display = "block";
+        out.classList.add("review-translate-error");
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  });
+}
 
 // ---------- Foto galerisi: kucuk fotoya tiklayinca buyuk foto degisir ----------
 function initGalleryThumbs() {

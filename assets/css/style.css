@@ -330,6 +330,18 @@ img { max-width: 100%; display: block; }
 .review-card .rtext { font-size: 14px; color: var(--charcoal); line-height: 1.6; }
 .review-more { text-align: center; margin-top: 18px; }
 
+.review-translate-btn {
+  align-self: flex-start; border: none; background: none; color: var(--teal);
+  font-size: 12px; font-weight: 700; cursor: pointer; padding: 0; margin-top: -2px;
+}
+.review-translate-btn:hover { text-decoration: underline; }
+.review-translate-btn:disabled { color: var(--gray); cursor: default; }
+.review-translated {
+  font-size: 13px; color: var(--gray); line-height: 1.5; font-style: italic;
+  border-left: 3px solid var(--teal); padding-left: 10px;
+}
+.review-translated.review-translate-error { border-left-color: #c85c5c; color: #c85c5c; font-style: normal; }
+
 /* ---------- Olanaklar: acilir/kapanir ---------- */
 .amenity-wrap { max-height: 172px; overflow: hidden; position: relative; transition: max-height .3s ease; }
 .amenity-wrap.expanded { max-height: 1000px; }
