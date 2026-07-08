@@ -324,3 +324,18 @@ img { max-width: 100%; display: block; }
   content: "▾"; position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
   font-size: 10px; color: var(--gray); pointer-events: none;
 }
+
+/* ---------- Diger platformlarda gor (ikincil, dusuk vurgu) ---------- */
+.ota-links { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-light); }
+.ota-label { font-size: 12px; color: var(--gray); margin-bottom: 8px; }
+.ota-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.ota-btn {
+  font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 999px;
+  border: 1.5px solid; transition: background .15s, color .15s;
+}
+.ota-btn.ota-airbnb { color: #FF385C; border-color: #FF385C; }
+.ota-btn.ota-airbnb:hover { background: #FF385C; color: var(--white); }
+.ota-btn.ota-booking { color: #003580; border-color: #003580; }
+.ota-btn.ota-booking:hover { background: #003580; color: var(--white); }
+.ota-btn.ota-trip { color: #287DFA; border-color: #287DFA; }
+.ota-btn.ota-trip:hover { background: #287DFA; color: var(--white); }
