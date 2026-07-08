@@ -201,7 +201,7 @@ img { max-width: 100%; display: block; }
   .gallery-scroll .thumb { width: 120px; height: 84px; }
 }
 
-/* ---------- Availability widget ---------- */
+/* ---------- Availability widget (Airbnb tarzı takvim) ---------- */
 .avail-card {
   background: var(--white); border-radius: 16px; padding: 24px;
   box-shadow: 0 2px 14px rgba(43,36,32,0.07);
@@ -216,6 +216,35 @@ img { max-width: 100%; display: block; }
 .avail-legend .sw { width: 10px; height: 10px; border-radius: 3px; }
 .sw-free { background: #dff2df; border: 1px solid #3f9142; }
 .sw-busy { background: #f6d9d9; border: 1px solid #c85c5c; }
+
+.avail-cal-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.avail-cal-nav button {
+  border: 1px solid var(--gray-light); background: var(--white); width: 28px; height: 28px;
+  border-radius: 50%; cursor: pointer; font-size: 14px; color: var(--charcoal); line-height: 1; padding: 0;
+}
+.avail-cal-nav button:disabled { opacity: .3; cursor: default; }
+.avail-months { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.avail-month-title { text-align: center; font-weight: 700; font-size: 12px; margin-bottom: 8px; text-transform: capitalize; }
+.avail-weekdays, .avail-days { display: grid; grid-template-columns: repeat(7, 1fr); }
+.avail-weekdays span { text-align: center; font-size: 10px; color: var(--gray); padding-bottom: 4px; }
+.avail-day {
+  position: relative; text-align: center; font-size: 12px; padding: 6px 0; cursor: pointer;
+  border-radius: 50%; color: var(--charcoal);
+}
+.avail-day.empty { cursor: default; }
+.avail-day.past, .avail-day.busy { color: var(--gray-light); text-decoration: line-through; cursor: default; }
+.avail-day:not(.past):not(.busy):not(.empty):hover { background: var(--cream-dark); }
+.avail-day.in-range { background: var(--cream-dark); border-radius: 0; }
+.avail-day.range-start, .avail-day.range-end { background: var(--orange); color: var(--white); font-weight: 700; }
+.avail-day.range-start { border-radius: 50% 0 0 50%; }
+.avail-day.range-end { border-radius: 0 50% 50% 0; }
+.avail-day.range-start.range-end { border-radius: 50%; }
+.avail-selected { font-size: 13px; margin: 14px 0 0; color: var(--charcoal); min-height: 18px; }
+.avail-selected strong { color: var(--orange-dark); }
+
+@media (max-width: 700px) {
+  .avail-months { grid-template-columns: 1fr; }
+}
 
 /* ---------- Form ---------- */
 .form-card {

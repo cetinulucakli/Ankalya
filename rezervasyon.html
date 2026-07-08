@@ -56,6 +56,10 @@
           <option value="ankalya-24">Ankalya 24</option>
           <option value="belirsiz">Emin değilim / hepsini göster</option>
         </select>
+        <div id="apt-preview" style="display:none;margin-top:10px;align-items:center;gap:10px;">
+          <img id="apt-preview-img" src="" alt="" style="width:64px;height:64px;object-fit:cover;border-radius:10px;">
+          <span id="apt-preview-label" style="font-size:13px;color:var(--gray);"></span>
+        </div>
       </div>
 
       <div class="form-row two-col">
@@ -142,13 +146,37 @@
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
-  // ?apt= parametresi varsa formda ön secili yap
+  // ?apt=, ?checkin= ve ?checkout= parametreleri varsa formda ön secili yap
+  const APT_COVERS = {
+    "ankalya-1": { img: "assets/img/anka1/anka1-kapak.jpg", label: "Ankalya 1" },
+    "ankalya-3": { img: "assets/img/anka3/anka3-kapak.jpg", label: "Ankalya 3" },
+    "ankalya-5": { img: "assets/img/anka5/anka5-kapak.jpg", label: "Ankalya 5" },
+    "ankalya-7": { img: "assets/img/anka7/anka7-kapak.jpg", label: "Ankalya 7" },
+    "ankalya-24": { img: "assets/img/anka24/anka24-bina1.jpg", label: "Ankalya 24" },
+  };
+
+  function updateAptPreview() {
+    const sel = document.getElementById("apt");
+    const preview = document.getElementById("apt-preview");
+    const cover = APT_COVERS[sel.value];
+    if (!cover) { preview.style.display = "none"; return; }
+    document.getElementById("apt-preview-img").src = cover.img;
+    document.getElementById("apt-preview-img").alt = cover.label;
+    document.getElementById("apt-preview-label").textContent = `Seçilen ev: ${cover.label}`;
+    preview.style.display = "flex";
+  }
+
   const params = new URLSearchParams(window.location.search);
   const aptParam = params.get("apt");
-  if (aptParam) {
-    const sel = document.getElementById("apt");
-    if (sel && [...sel.options].some(o => o.value === aptParam)) sel.value = aptParam;
-  }
+  const checkinParam = params.get("checkin");
+  const checkoutParam = params.get("checkout");
+  const sel = document.getElementById("apt");
+  if (aptParam && sel && [...sel.options].some(o => o.value === aptParam)) sel.value = aptParam;
+  if (checkinParam) document.getElementById("checkin").value = checkinParam;
+  if (checkoutParam) document.getElementById("checkout").value = checkoutParam;
+
+  sel.addEventListener("change", updateAptPreview);
+  updateAptPreview();
 </script>
 </body>
 </html>
