@@ -176,26 +176,29 @@ img { max-width: 100%; display: block; }
 .gallery-grid a:first-child img { }
 @media (max-width: 700px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
 
-/* Buyuk kapak foto + altinda 2 satirlik yatay kaydirilan seri */
+/* Buyuk (tiklaninca degisen) kapak foto + altinda tek satir kucuk foto seridi */
 .gallery-hero { border-radius: 16px; overflow: hidden; margin-bottom: 8px; }
-.gallery-hero img { width: 100%; height: 420px; object-fit: cover; display: block; }
+.gallery-hero img { width: 100%; height: 420px; object-fit: cover; display: block; transition: opacity .15s; }
 .gallery-scroll {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(2, 150px);
-  grid-auto-columns: 200px;
+  display: flex;
   gap: 8px;
   overflow-x: auto;
   padding-bottom: 8px;
   scroll-snap-type: x proximity;
 }
-.gallery-scroll img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; scroll-snap-align: start; }
+.gallery-scroll .thumb {
+  flex: 0 0 auto; width: 160px; height: 110px; border-radius: 10px; overflow: hidden;
+  cursor: pointer; scroll-snap-align: start; border: 3px solid transparent; padding: 0;
+  background: none; display: block;
+}
+.gallery-scroll .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-scroll .thumb.active { border-color: var(--orange); }
 .gallery-scroll::-webkit-scrollbar { height: 8px; }
 .gallery-scroll::-webkit-scrollbar-track { background: var(--cream-dark); border-radius: 4px; }
 .gallery-scroll::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
 @media (max-width: 700px) {
   .gallery-hero img { height: 240px; }
-  .gallery-scroll { grid-template-rows: repeat(2, 110px); grid-auto-columns: 140px; }
+  .gallery-scroll .thumb { width: 120px; height: 84px; }
 }
 
 /* ---------- Availability widget ---------- */

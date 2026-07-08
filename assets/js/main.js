@@ -10,7 +10,30 @@ document.addEventListener("DOMContentLoaded", () => {
   initAvailability();
   initBookingForm();
   initAmenityToggle();
+  initGalleryThumbs();
 });
+
+// ---------- Foto galerisi: kucuk fotoya tiklayinca buyuk foto degisir ----------
+function initGalleryThumbs() {
+  document.querySelectorAll(".gallery-hero").forEach((hero) => {
+    const scroll = hero.parentElement && hero.parentElement.querySelector(".gallery-scroll");
+    if (!scroll) return;
+    const heroImg = hero.querySelector("img");
+    const heroLink = hero.querySelector("a");
+    scroll.querySelectorAll(".thumb").forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        const full = thumb.dataset.full;
+        if (!full) return;
+        const thumbImg = thumb.querySelector("img");
+        heroImg.src = full;
+        heroImg.alt = thumbImg ? thumbImg.alt : heroImg.alt;
+        if (heroLink) heroLink.href = full;
+        scroll.querySelectorAll(".thumb").forEach((t) => t.classList.remove("active"));
+        thumb.classList.add("active");
+      });
+    });
+  });
+}
 
 function initAmenityToggle() {
   document.querySelectorAll(".amenity-toggle-btn").forEach((btn) => {
