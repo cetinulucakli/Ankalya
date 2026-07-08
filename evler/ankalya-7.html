@@ -13,7 +13,7 @@
 <body>
 
 <header class="site-header">
-  <div class="promo-bar">5 evimiz de Antalya Muratpaşa'da — <a href="../rezervasyon.html">hemen ön onay talebi gönderin →</a></div>
+  <div class="promo-bar"><span data-i18n="promo_bar">5 evimiz de Antalya Muratpaşa'da — </span> <a href="../rezervasyon.html"><span data-i18n="promo_cta">hemen ön onay talebi gönderin →</span></a></div>
   <div class="nav-row">
     <a href="../index.html" class="brand">
       <img src="../assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
@@ -23,13 +23,14 @@
       </div>
     </a>
     <nav class="nav-links">
-      <a href="../index.html">Ana Sayfa</a>
-      <a href="../evlerimiz.html" class="active">Evlerimiz</a>
-      <a href="../hakkimizda.html">Hakkımızda</a>
-      <a href="../sss.html">SSS</a>
-      <a href="../iletisim.html">İletişim</a>
-      <a href="../rezervasyon.html" class="nav-cta">Rezervasyon Talebi</a>
+      <a href="../index.html" data-i18n="nav_home">Ana Sayfa</a>
+      <a href="../evlerimiz.html" class="active" data-i18n="nav_apartments">Evlerimiz</a>
+      <a href="../hakkimizda.html" data-i18n="nav_about">Hakkımızda</a>
+      <a href="../sss.html" data-i18n="nav_faq">SSS</a>
+      <a href="../iletisim.html" data-i18n="nav_contact">İletişim</a>
+      <a href="../rezervasyon.html" class="nav-cta" data-i18n="nav_book">Rezervasyon Talebi</a>
     </nav>
+    <div class="lang-switch"><select id="lang-select" aria-label="Dil / Language"></select></div>
     <button class="nav-toggle" aria-label="Menü">☰</button>
   </div>
 </header>
@@ -48,24 +49,91 @@
     <div class="img-wrap" style="border-radius:16px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--gray);">
       Fotoğraflar yakında
     </div>
-    <h2 style="font-size:22px;margin-top:28px;">Ev Hakkında</h2>
+    <h2 style="font-size:22px;margin-top:28px;" data-i18n="section_about_home">Ev Hakkında</h2>
     <p>Ankalya 7'in içerik ve fotoğrafları hazırlanıyor. Bu daireyle ilgilendiğinizi bize iletmek isterseniz ön onay formundan tarihlerinizi gönderebilirsiniz, size en kısa sürede tüm detaylarla dönüş yaparız.</p>
   </div>
 
   <aside>
     <div class="avail-card">
-      <h3 style="font-size:17px;">Canlı Müsaitlik</h3>
+      <h3 style="font-size:17px;"><span data-i18n="section_availability">Canlı Müsaitlik</span></h3>
       <div id="avail-widget" data-apt="ankalya-7">
-        <div class="avail-status"><span class="avail-dot loading"></span> Yükleniyor...</div>
+        <div class="avail-status"><span class="avail-dot loading"></span> <span data-i18n="loading">Yükleniyor...</span></div>
         <div id="avail-calendar"></div>
         <div class="avail-legend">
-          <span><span class="sw sw-free"></span> Müsait</span>
-          <span><span class="sw sw-busy"></span> Dolu</span>
+          <span><span class="sw sw-free"></span data-i18n="legend_free"> Müsait</span>
+          <span><span class="sw sw-busy"></span data-i18n="legend_busy"> Dolu</span>
         </div>
       </div>
-      <a href="../rezervasyon.html?apt=ankalya-7" class="btn btn-primary" style="width:100%;text-align:center;margin-top:18px;">Bu Ev İçin Ön Onay Talebi Gönder</a>
+      <a href="../rezervasyon.html?apt=ankalya-7" class="btn btn-primary" style="width:100%;text-align:center;margin-top:18px;"><span data-i18n="btn_send_request">Bu Ev İçin Ön Onay Talebi Gönder</span></a>
     </div>
   </aside>
+  </div>
+</section>
+
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <h2 style="font-size:22px;margin-bottom:16px;"><span data-i18n="section_reviews">Misafir Yorumları</span></h2>
+    <div class="review-summary">
+      <div>
+        <div class="score">9,8 / 10</div>
+        <div class="score-sub">Booking.com üzerinde 12 değerlendirme · Olağanüstü</div>
+      </div>
+      <div class="platform-badges">
+        <span class="platform-badge airbnb">Airbnb</span>
+        <span class="platform-badge booking">Booking.com</span>
+      </div>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇩🇪</span> Petra</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">Almanya · Haziran 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">Ich habe schon viele Ferienwohnungen besucht, doch diese war mit Abstand die Beste. Der Gastgeber war sehr höflich, freundlich und zuvorkommend, danke Mehmet!!! Hier wurde wirklich an alles gedacht.</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇺🇸</span> Elizabeth</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">ABD · Mayıs 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">Wonderful apartment for a great value! The apartment was super cute and spacious. The kitchen had everything we needed. We loved our stay!</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇩🇪</span> Ezgi</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">Almanya · Temmuz 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">We had a wonderful stay! The apartment was spotlessly clean, beautifully decorated, and had everything we needed for a comfortable stay.</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇿🇦</span> Shabnam</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">Güney Afrika · Haziran 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">The apartment is well equipped with everything you need and more. The location is quite central and about 10min by car to old town.</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇨🇭</span> Mykhailo</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">İsviçre · Nisan 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">Хороший ремонт, быстрая помощь хозяина, а также очень комфортная атмосфера.</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇸🇦</span> Zaki</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">Suudi Arabistan · Mayıs 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">الشقة نظيفة جدا وحلوة ومرتبة، ويوجد أيضا مطبخ وجميع الأوازم موجودة في الشقة وكل شيء قريب من الموقع، وصاحب الشقة محترم جدا وله جزيل الشكر.</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -77,10 +145,10 @@
           <img src="../assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
           <div class="brand-text"><span class="logo-word" style="color:#fff;">Ankalya</span></div>
         </div>
-        <p style="color:#b7b0a4;font-size:14px;max-width:280px;">Antalya Muratpaşa'da, şehrin kalbinde 5 özenle hazırlanmış tatil evi.</p>
+        <p style="color:#b7b0a4;font-size:14px;max-width:280px;" data-i18n="footer_desc">Antalya Muratpaşa'da, şehrin kalbinde 5 özenle hazırlanmış tatil evi.</p>
       </div>
       <div>
-        <h4>Evlerimiz</h4>
+        <h4 data-i18n="footer_apartments">Evlerimiz</h4>
         <a href="ankalya-3.html">Ankalya 3</a>
         <a href="ankalya-5.html">Ankalya 5</a>
         <a href="ankalya-24.html">Ankalya 24</a>
@@ -88,24 +156,25 @@
         <a href="ankalya-7.html">Ankalya 7</a>
       </div>
       <div>
-        <h4>Kurumsal</h4>
-        <a href="../hakkimizda.html">Hakkımızda</a>
+        <h4 data-i18n="footer_corporate">Kurumsal</h4>
+        <a href="../hakkimizda.html" data-i18n="nav_about">Hakkımızda</a>
         <a href="../sss.html">Sıkça Sorulan Sorular</a>
-        <a href="../iletisim.html">İletişim</a>
+        <a href="../iletisim.html" data-i18n="nav_contact">İletişim</a>
       </div>
       <div>
-        <h4>İletişim</h4>
+        <h4 data-i18n="footer_contact">İletişim</h4>
         <a href="mailto:info@ankalya.tr">info@ankalya.tr</a>
-        <a href="../iletisim.html">WhatsApp &amp; Telefon</a>
+        <a href="../iletisim.html" data-i18n="footer_whatsapp">WhatsApp &amp; Telefon</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Ankalya. Tüm hakları saklıdır.</span>
+      <span data-i18n="footer_copyright">&copy; 2026 Ankalya. Tüm hakları saklıdır.</span>
       <span>Muratpaşa, Antalya</span>
     </div>
   </div>
 </footer>
 
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

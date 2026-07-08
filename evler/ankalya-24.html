@@ -13,7 +13,7 @@
 <body>
 
 <header class="site-header">
-  <div class="promo-bar">5 evimiz de Antalya Muratpaşa'da — <a href="../rezervasyon.html">hemen ön onay talebi gönderin →</a></div>
+  <div class="promo-bar"><span data-i18n="promo_bar">5 evimiz de Antalya Muratpaşa'da — </span> <a href="../rezervasyon.html"><span data-i18n="promo_cta">hemen ön onay talebi gönderin →</span></a></div>
   <div class="nav-row">
     <a href="../index.html" class="brand">
       <img src="../assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
@@ -23,13 +23,14 @@
       </div>
     </a>
     <nav class="nav-links">
-      <a href="../index.html">Ana Sayfa</a>
-      <a href="../evlerimiz.html" class="active">Evlerimiz</a>
-      <a href="../hakkimizda.html">Hakkımızda</a>
-      <a href="../sss.html">SSS</a>
-      <a href="../iletisim.html">İletişim</a>
-      <a href="../rezervasyon.html" class="nav-cta">Rezervasyon Talebi</a>
+      <a href="../index.html" data-i18n="nav_home">Ana Sayfa</a>
+      <a href="../evlerimiz.html" class="active" data-i18n="nav_apartments">Evlerimiz</a>
+      <a href="../hakkimizda.html" data-i18n="nav_about">Hakkımızda</a>
+      <a href="../sss.html" data-i18n="nav_faq">SSS</a>
+      <a href="../iletisim.html" data-i18n="nav_contact">İletişim</a>
+      <a href="../rezervasyon.html" class="nav-cta" data-i18n="nav_book">Rezervasyon Talebi</a>
     </nav>
+    <div class="lang-switch"><select id="lang-select" aria-label="Dil / Language"></select></div>
     <button class="nav-toggle" aria-label="Menü">☰</button>
   </div>
 </header>
@@ -44,27 +45,40 @@
 <section>
   <div class="container">
     <div class="gallery-grid">
-      <a href="https://ak-d.tripcdn.com/images/0580412000soih7dyBB73_R_960_660_R5_D.jpg" target="_blank" style="grid-column: span 2; grid-row: span 2;">
-        <img src="https://ak-d.tripcdn.com/images/0580412000soih7dyBB73_R_960_660_R5_D.jpg" alt="Ankalya 24 - genel görünüm" style="height:100%;">
+      <a href="../assets/img/anka24/anka24-bina1.jpg" target="_blank" style="grid-column: span 2; grid-row: span 2;">
+        <img src="../assets/img/anka24/anka24-bina1.jpg" alt="Ankalya 24 - bina dışı" style="height:100%;">
       </a>
-      <a href="https://ak-d.tripcdn.com/images/0582612000sncujoh3166_R_339_206_R5_D.jpg" target="_blank"><img src="https://ak-d.tripcdn.com/images/0582612000sncujoh3166_R_339_206_R5_D.jpg" alt="Ankalya 24 - iç mekan"></a>
-      <a href="https://ak-d.tripcdn.com/images/0585t12000soisx9b8F3F_R_339_206_R5_D.jpg" target="_blank"><img src="https://ak-d.tripcdn.com/images/0585t12000soisx9b8F3F_R_339_206_R5_D.jpg" alt="Ankalya 24 - iç mekan"></a>
-      <a href="https://ak-d.tripcdn.com/images/0581x12000soig4cz3DE6_R_339_206_R5_D.jpg" target="_blank"><img src="https://ak-d.tripcdn.com/images/0581x12000soig4cz3DE6_R_339_206_R5_D.jpg" alt="Ankalya 24 - iç mekan"></a>
-      <a href="https://ak-d.tripcdn.com/images/0586h12000snmwlag1C7D_R_339_206_R5_D.jpg" target="_blank"><img src="https://ak-d.tripcdn.com/images/0586h12000snmwlag1C7D_R_339_206_R5_D.jpg" alt="Ankalya 24 - iç mekan"></a>
-      <a href="https://ak-d.tripcdn.com/images/0583s12000soig31z6AC0_R_339_206_R5_D.jpg" target="_blank"><img src="https://ak-d.tripcdn.com/images/0583s12000soig31z6AC0_R_339_206_R5_D.jpg" alt="Ankalya 24 - iç mekan"></a>
-      <a href="https://ak-d.tripcdn.com/images/1z63112000qzhlpza1BD1_R_339_206_R5_D.jpg" target="_blank"><img src="https://ak-d.tripcdn.com/images/1z63112000qzhlpza1BD1_R_339_206_R5_D.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-01.jpg" target="_blank"><img src="../assets/img/anka24/anka24-01.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-02.jpg" target="_blank"><img src="../assets/img/anka24/anka24-02.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-03.jpg" target="_blank"><img src="../assets/img/anka24/anka24-03.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-04.jpg" target="_blank"><img src="../assets/img/anka24/anka24-04.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-05.jpg" target="_blank"><img src="../assets/img/anka24/anka24-05.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-06.jpg" target="_blank"><img src="../assets/img/anka24/anka24-06.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-07.jpg" target="_blank"><img src="../assets/img/anka24/anka24-07.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-08.jpg" target="_blank"><img src="../assets/img/anka24/anka24-08.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-09.jpg" target="_blank"><img src="../assets/img/anka24/anka24-09.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-10.jpg" target="_blank"><img src="../assets/img/anka24/anka24-10.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-11.jpg" target="_blank"><img src="../assets/img/anka24/anka24-11.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-12.jpg" target="_blank"><img src="../assets/img/anka24/anka24-12.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-13.jpg" target="_blank"><img src="../assets/img/anka24/anka24-13.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-14.jpg" target="_blank"><img src="../assets/img/anka24/anka24-14.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-15.jpg" target="_blank"><img src="../assets/img/anka24/anka24-15.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-16.jpg" target="_blank"><img src="../assets/img/anka24/anka24-16.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-17.jpg" target="_blank"><img src="../assets/img/anka24/anka24-17.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-18.jpg" target="_blank"><img src="../assets/img/anka24/anka24-18.jpg" alt="Ankalya 24 - iç mekan"></a>
+      <a href="../assets/img/anka24/anka24-bina2.jpg" target="_blank"><img src="../assets/img/anka24/anka24-bina2.jpg" alt="Ankalya 24 - bina dışı"></a>
     </div>
-    <p class="form-note" style="margin-top:8px;">* Bu fotoğraflar Trip.com ilanımızdan alınmıştır, daha yüksek çözünürlüklü ve güncel fotoğraflar eklendiğinde bu galeri güncellenecektir.</p>
+    <p class="form-note" style="margin-top:8px;">* Fotoğraflar dairenin kendi çekimleridir.</p>
   </div>
 </section>
 
 <section class="section" style="padding-top:24px;">
   <div class="container" style="display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:start;">
   <div>
-    <h2 style="font-size:22px;">Ev Hakkında</h2>
+    <h2 style="font-size:22px;" data-i18n="section_about_home">Ev Hakkında</h2>
     <p>Merkezi konumda 2+1 Daire - Ankalya 24'te konaklarken, Muratpaşa bölgesini keşfetmek için mükemmel bir konumda olacaksınız. Ekstra kolaylık sağlamak için tesiste ücretsiz çamaşırhane hizmeti de mevcuttur. Arabayla gelen konuklar tesisin otoparkını kullanabilirler.</p>
 
-    <h2 style="font-size:22px;margin-top:32px;">Olanaklar</h2>
+    <h2 style="font-size:22px;margin-top:32px;"><span data-i18n="section_amenities">Olanaklar</span></h2>
     <div class="amenity-grid">
       <div class="amenity-item"><span class="dot"></span> Self-servis giriş</div>
       <div class="amenity-item"><span class="dot"></span> Ücretsiz otopark</div>
@@ -83,7 +97,7 @@
       <div class="amenity-item"><span class="dot"></span> Sigara içilen alan</div>
     </div>
 
-    <h2 style="font-size:22px;margin-top:32px;">Bilmeniz Gerekenler</h2>
+    <h2 style="font-size:22px;margin-top:32px;"><span data-i18n="section_know_before">Bilmeniz Gerekenler</span></h2>
     <div class="amenity-grid">
       <div class="amenity-item"><span class="dot"></span> Giriş: 15:00 sonrası · Çıkış: 11:00 öncesi</div>
       <div class="amenity-item"><span class="dot"></span> Evcil hayvanlara talep üzerine izin verilir (konaklama başına €30)</div>
@@ -93,18 +107,85 @@
 
   <aside>
     <div class="avail-card">
-      <h3 style="font-size:17px;">Canlı Müsaitlik</h3>
+      <h3 style="font-size:17px;"><span data-i18n="section_availability">Canlı Müsaitlik</span></h3>
       <div id="avail-widget" data-apt="ankalya-24">
-        <div class="avail-status"><span class="avail-dot loading"></span> Yükleniyor...</div>
+        <div class="avail-status"><span class="avail-dot loading"></span> <span data-i18n="loading">Yükleniyor...</span></div>
         <div id="avail-calendar"></div>
         <div class="avail-legend">
-          <span><span class="sw sw-free"></span> Müsait</span>
-          <span><span class="sw sw-busy"></span> Dolu</span>
+          <span><span class="sw sw-free"></span data-i18n="legend_free"> Müsait</span>
+          <span><span class="sw sw-busy"></span data-i18n="legend_busy"> Dolu</span>
         </div>
       </div>
-      <a href="../rezervasyon.html?apt=ankalya-24" class="btn btn-primary" style="width:100%;text-align:center;margin-top:18px;">Bu Ev İçin Ön Onay Talebi Gönder</a>
+      <a href="../rezervasyon.html?apt=ankalya-24" class="btn btn-primary" style="width:100%;text-align:center;margin-top:18px;"><span data-i18n="btn_send_request">Bu Ev İçin Ön Onay Talebi Gönder</span></a>
     </div>
   </aside>
+  </div>
+</section>
+
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <h2 style="font-size:22px;margin-bottom:16px;"><span data-i18n="section_reviews">Misafir Yorumları</span></h2>
+    <div class="review-summary">
+      <div>
+        <div class="score">9,7 / 10</div>
+        <div class="score-sub">Booking.com üzerinde 40 değerlendirme · Olağanüstü</div>
+      </div>
+      <div class="platform-badges">
+        <span class="platform-badge airbnb">Airbnb</span>
+        <span class="platform-badge booking">Booking.com</span>
+      </div>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇬🇧</span> Abid</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">Birleşik Krallık · Nisan 2026 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">The landlord Cetin is very good. His communication is excellent and he made sure that our stay was perfect.</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇺🇦</span> Oleksandra</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">Ukrayna · Mayıs 2025 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">This is one of the BEST apartments I've ever rented. And I travel around the world a lot. The renovation is new, and beautiful. Everything is very clean! The kitchen has EVERYTHING! Very comfortable beds. The staff responds to messages very quickly and very politely.</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇩🇰</span> Francesco</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">Danimarka · Ekim 2025 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">The apartment is big and has all the comforts, everything you need for a great stay. Ideal for couples but also for a family thanks to the 2 bedrooms. A few steps away from the city center. Very much recommended!</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇰🇿</span> Наталья</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">Kazakistan · Ağustos 2025 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">Супер квартира! Все, что нужно для жизни, отдыха и работы — все было. Даже более чем! Хозяин очень мило встретил нас пивом и сладостями в холодильнике.</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🇦🇹</span> Petra</div>
+          <div class="rscore">10/10</div>
+        </div>
+        <div class="rmeta">Avusturya · Aralık 2025 · <span class="rplatform booking">Booking.com</span></div>
+        <div class="rtext">Es war sehr schön dort und es fehlte uns an nichts. Es war sehr gepflegt und auch die Gastgeber waren stets freundlich und hilfsbereit. Ich würde jederzeit wieder dorthin gehen 🥰</div>
+      </div>
+      <div class="review-card">
+        <div class="rhead">
+          <div class="reviewer"><span class="flag">🌍</span> Elena</div>
+          <div class="rscore">5/5</div>
+        </div>
+        <div class="rmeta">Airbnb misafiri · Haziran 2025 · <span class="rplatform airbnb">Airbnb</span></div>
+        <div class="rtext">A very cozy apartment — the host provided everything we needed and even more. Every detail was thoughtfully arranged, and there was even a welcome treat in the fridge 😁 We highly recommend this place!</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -116,10 +197,10 @@
           <img src="../assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
           <div class="brand-text"><span class="logo-word" style="color:#fff;">Ankalya</span></div>
         </div>
-        <p style="color:#b7b0a4;font-size:14px;max-width:280px;">Antalya Muratpaşa'da, şehrin kalbinde 5 özenle hazırlanmış tatil evi.</p>
+        <p style="color:#b7b0a4;font-size:14px;max-width:280px;" data-i18n="footer_desc">Antalya Muratpaşa'da, şehrin kalbinde 5 özenle hazırlanmış tatil evi.</p>
       </div>
       <div>
-        <h4>Evlerimiz</h4>
+        <h4 data-i18n="footer_apartments">Evlerimiz</h4>
         <a href="ankalya-3.html">Ankalya 3</a>
         <a href="ankalya-5.html">Ankalya 5</a>
         <a href="ankalya-24.html">Ankalya 24</a>
@@ -127,24 +208,25 @@
         <a href="ankalya-7.html">Ankalya 7</a>
       </div>
       <div>
-        <h4>Kurumsal</h4>
-        <a href="../hakkimizda.html">Hakkımızda</a>
+        <h4 data-i18n="footer_corporate">Kurumsal</h4>
+        <a href="../hakkimizda.html" data-i18n="nav_about">Hakkımızda</a>
         <a href="../sss.html">Sıkça Sorulan Sorular</a>
-        <a href="../iletisim.html">İletişim</a>
+        <a href="../iletisim.html" data-i18n="nav_contact">İletişim</a>
       </div>
       <div>
-        <h4>İletişim</h4>
+        <h4 data-i18n="footer_contact">İletişim</h4>
         <a href="mailto:info@ankalya.tr">info@ankalya.tr</a>
-        <a href="../iletisim.html">WhatsApp &amp; Telefon</a>
+        <a href="../iletisim.html" data-i18n="footer_whatsapp">WhatsApp &amp; Telefon</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Ankalya. Tüm hakları saklıdır.</span>
+      <span data-i18n="footer_copyright">&copy; 2026 Ankalya. Tüm hakları saklıdır.</span>
       <span>Muratpaşa, Antalya</span>
     </div>
   </div>
 </footer>
 
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

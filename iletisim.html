@@ -13,7 +13,7 @@
 <body>
 
 <header class="site-header">
-  <div class="promo-bar">5 evimiz de Antalya Muratpaşa'da — <a href="rezervasyon.html">hemen ön onay talebi gönderin →</a></div>
+  <div class="promo-bar"><span data-i18n="promo_bar">5 evimiz de Antalya Muratpaşa'da — </span> <a href="rezervasyon.html"><span data-i18n="promo_cta">hemen ön onay talebi gönderin →</span></a></div>
   <div class="nav-row">
     <a href="index.html" class="brand">
       <img src="assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
@@ -23,13 +23,14 @@
       </div>
     </a>
     <nav class="nav-links">
-      <a href="index.html">Ana Sayfa</a>
-      <a href="evlerimiz.html">Evlerimiz</a>
-      <a href="hakkimizda.html">Hakkımızda</a>
-      <a href="sss.html">SSS</a>
-      <a href="iletisim.html" class="active">İletişim</a>
-      <a href="rezervasyon.html" class="nav-cta">Rezervasyon Talebi</a>
+      <a href="index.html" data-i18n="nav_home">Ana Sayfa</a>
+      <a href="evlerimiz.html" data-i18n="nav_apartments">Evlerimiz</a>
+      <a href="hakkimizda.html" data-i18n="nav_about">Hakkımızda</a>
+      <a href="sss.html" data-i18n="nav_faq">SSS</a>
+      <a href="iletisim.html" class="active" data-i18n="nav_contact">İletişim</a>
+      <a href="rezervasyon.html" class="nav-cta" data-i18n="nav_book">Rezervasyon Talebi</a>
     </nav>
+    <div class="lang-switch"><select id="lang-select" aria-label="Dil / Language"></select></div>
     <button class="nav-toggle" aria-label="Menü">☰</button>
   </div>
 </header>
@@ -67,10 +68,10 @@
           <img src="assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
           <div class="brand-text"><span class="logo-word" style="color:#fff;">Ankalya</span></div>
         </div>
-        <p style="color:#b7b0a4;font-size:14px;max-width:280px;">Antalya Muratpaşa'da, şehrin kalbinde 5 özenle hazırlanmış tatil evi.</p>
+        <p style="color:#b7b0a4;font-size:14px;max-width:280px;" data-i18n="footer_desc">Antalya Muratpaşa'da, şehrin kalbinde 5 özenle hazırlanmış tatil evi.</p>
       </div>
       <div>
-        <h4>Evlerimiz</h4>
+        <h4 data-i18n="footer_apartments">Evlerimiz</h4>
         <a href="evler/ankalya-3.html">Ankalya 3</a>
         <a href="evler/ankalya-5.html">Ankalya 5</a>
         <a href="evler/ankalya-24.html">Ankalya 24</a>
@@ -78,24 +79,25 @@
         <a href="evler/ankalya-7.html">Ankalya 7</a>
       </div>
       <div>
-        <h4>Kurumsal</h4>
-        <a href="hakkimizda.html">Hakkımızda</a>
+        <h4 data-i18n="footer_corporate">Kurumsal</h4>
+        <a href="hakkimizda.html" data-i18n="nav_about">Hakkımızda</a>
         <a href="sss.html">Sıkça Sorulan Sorular</a>
-        <a href="iletisim.html">İletişim</a>
+        <a href="iletisim.html" data-i18n="nav_contact">İletişim</a>
       </div>
       <div>
-        <h4>İletişim</h4>
+        <h4 data-i18n="footer_contact">İletişim</h4>
         <a href="mailto:info@ankalya.tr">info@ankalya.tr</a>
-        <a href="iletisim.html">WhatsApp &amp; Telefon</a>
+        <a href="iletisim.html" data-i18n="footer_whatsapp">WhatsApp &amp; Telefon</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Ankalya. Tüm hakları saklıdır.</span>
+      <span data-i18n="footer_copyright">&copy; 2026 Ankalya. Tüm hakları saklıdır.</span>
       <span>Muratpaşa, Antalya</span>
     </div>
   </div>
 </footer>
 
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

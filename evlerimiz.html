@@ -13,7 +13,7 @@
 <body>
 
 <header class="site-header">
-  <div class="promo-bar">5 evimiz de Antalya Muratpaşa'da — <a href="rezervasyon.html">hemen ön onay talebi gönderin →</a></div>
+  <div class="promo-bar"><span data-i18n="promo_bar">5 evimiz de Antalya Muratpaşa'da — </span> <a href="rezervasyon.html"><span data-i18n="promo_cta">hemen ön onay talebi gönderin →</span></a></div>
   <div class="nav-row">
     <a href="index.html" class="brand">
       <img src="assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
@@ -23,13 +23,14 @@
       </div>
     </a>
     <nav class="nav-links">
-      <a href="index.html">Ana Sayfa</a>
-      <a href="evlerimiz.html" class="active">Evlerimiz</a>
-      <a href="hakkimizda.html">Hakkımızda</a>
-      <a href="sss.html">SSS</a>
-      <a href="iletisim.html">İletişim</a>
-      <a href="rezervasyon.html" class="nav-cta">Rezervasyon Talebi</a>
+      <a href="index.html" data-i18n="nav_home">Ana Sayfa</a>
+      <a href="evlerimiz.html" class="active" data-i18n="nav_apartments">Evlerimiz</a>
+      <a href="hakkimizda.html" data-i18n="nav_about">Hakkımızda</a>
+      <a href="sss.html" data-i18n="nav_faq">SSS</a>
+      <a href="iletisim.html" data-i18n="nav_contact">İletişim</a>
+      <a href="rezervasyon.html" class="nav-cta" data-i18n="nav_book">Rezervasyon Talebi</a>
     </nav>
+    <div class="lang-switch"><select id="lang-select" aria-label="Dil / Language"></select></div>
     <button class="nav-toggle" aria-label="Menü">☰</button>
   </div>
 </header>
@@ -48,7 +49,7 @@
       <div class="apt-card">
         <a href="evler/ankalya-3.html">
           <div class="img-wrap">
-            <img src="https://ak-d.tripcdn.com/images/1z66f12000qzhhowz4BB9_R_960_660_R5_D.jpg" alt="Ankalya 3">
+            <img src="assets/img/anka3/anka3-01.jpg" alt="Ankalya 3">
             <span class="badge">2 Yatak Odalı</span>
           </div>
         </a>
@@ -56,27 +57,27 @@
           <h3><a href="evler/ankalya-3.html">Ankalya 3</a></h3>
           <div class="meta">Muratpaşa · Hadrian Kapısı'na yakın</div>
           <div class="tags"><span class="tag">Balkon</span><span class="tag">Çamaşır Makinesi</span><span class="tag">Ücretsiz Wi-Fi</span></div>
-          <a href="evler/ankalya-3.html" class="btn btn-outline" style="width:100%;text-align:center;">Detayları Gör</a>
+          <a href="evler/ankalya-3.html" class="btn btn-outline" style="width:100%;text-align:center;" data-i18n="btn_view_details">Detayları Gör</a>
         </div>
       </div>
 
       <div class="apt-card">
-        <a href="evler/ankalya-5.html"><div class="img-wrap"><img src="https://ak-d.tripcdn.com/images/1z66f12000qzhhowz4BB9_R_960_660_R5_D.jpg" alt="Ankalya 5"><span class="badge">2 Yatak Odalı</span></div></a>
+        <a href="evler/ankalya-5.html"><div class="img-wrap"><img src="assets/img/anka5/anka5-01.jpg" alt="Ankalya 5"><span class="badge">2 Yatak Odalı</span></div></a>
         <div class="body">
           <h3><a href="evler/ankalya-5.html">Ankalya 5</a></h3>
           <div class="meta">Muratpaşa, Antalya</div>
           <div class="tags"><span class="tag">Balkon</span><span class="tag">Ücretsiz Otopark</span></div>
-          <a href="evler/ankalya-5.html" class="btn btn-outline" style="width:100%;text-align:center;">Detayları Gör</a>
+          <a href="evler/ankalya-5.html" class="btn btn-outline" style="width:100%;text-align:center;" data-i18n="btn_view_details">Detayları Gör</a>
         </div>
       </div>
 
       <div class="apt-card">
-        <a href="evler/ankalya-24.html"><div class="img-wrap"><img src="https://ak-d.tripcdn.com/images/0580412000soih7dyBB73_R_960_660_R5_D.jpg" alt="Ankalya 24"><span class="badge">2+1 Daire</span></div></a>
+        <a href="evler/ankalya-24.html"><div class="img-wrap"><img src="assets/img/anka24/anka24-bina1.jpg" alt="Ankalya 24"><span class="badge">2+1 Daire</span></div></a>
         <div class="body">
           <h3><a href="evler/ankalya-24.html">Ankalya 24</a></h3>
           <div class="meta">Muratpaşa, Antalya · Merkezi konum</div>
           <div class="tags"><span class="tag">Self-Servis Giriş</span><span class="tag">Ücretsiz Otopark</span></div>
-          <a href="evler/ankalya-24.html" class="btn btn-outline" style="width:100%;text-align:center;">Detayları Gör</a>
+          <a href="evler/ankalya-24.html" class="btn btn-outline" style="width:100%;text-align:center;" data-i18n="btn_view_details">Detayları Gör</a>
         </div>
       </div>
 
@@ -86,7 +87,7 @@
           <h3><a href="evler/ankalya-1.html">Ankalya 1</a></h3>
           <div class="meta">Muratpaşa, Antalya</div>
           <div class="tags"><span class="tag">İçerik hazırlanıyor</span></div>
-          <a href="evler/ankalya-1.html" class="btn btn-outline" style="width:100%;text-align:center;">Detayları Gör</a>
+          <a href="evler/ankalya-1.html" class="btn btn-outline" style="width:100%;text-align:center;" data-i18n="btn_view_details">Detayları Gör</a>
         </div>
       </div>
 
@@ -96,7 +97,7 @@
           <h3><a href="evler/ankalya-7.html">Ankalya 7</a></h3>
           <div class="meta">Muratpaşa, Antalya</div>
           <div class="tags"><span class="tag">İçerik hazırlanıyor</span></div>
-          <a href="evler/ankalya-7.html" class="btn btn-outline" style="width:100%;text-align:center;">Detayları Gör</a>
+          <a href="evler/ankalya-7.html" class="btn btn-outline" style="width:100%;text-align:center;" data-i18n="btn_view_details">Detayları Gör</a>
         </div>
       </div>
 
@@ -112,10 +113,10 @@
           <img src="assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
           <div class="brand-text"><span class="logo-word" style="color:#fff;">Ankalya</span></div>
         </div>
-        <p style="color:#b7b0a4;font-size:14px;max-width:280px;">Antalya Muratpaşa'da, şehrin kalbinde 5 özenle hazırlanmış tatil evi.</p>
+        <p style="color:#b7b0a4;font-size:14px;max-width:280px;" data-i18n="footer_desc">Antalya Muratpaşa'da, şehrin kalbinde 5 özenle hazırlanmış tatil evi.</p>
       </div>
       <div>
-        <h4>Evlerimiz</h4>
+        <h4 data-i18n="footer_apartments">Evlerimiz</h4>
         <a href="evler/ankalya-3.html">Ankalya 3</a>
         <a href="evler/ankalya-5.html">Ankalya 5</a>
         <a href="evler/ankalya-24.html">Ankalya 24</a>
@@ -123,19 +124,19 @@
         <a href="evler/ankalya-7.html">Ankalya 7</a>
       </div>
       <div>
-        <h4>Kurumsal</h4>
-        <a href="hakkimizda.html">Hakkımızda</a>
+        <h4 data-i18n="footer_corporate">Kurumsal</h4>
+        <a href="hakkimizda.html" data-i18n="nav_about">Hakkımızda</a>
         <a href="sss.html">Sıkça Sorulan Sorular</a>
-        <a href="iletisim.html">İletişim</a>
+        <a href="iletisim.html" data-i18n="nav_contact">İletişim</a>
       </div>
       <div>
-        <h4>İletişim</h4>
+        <h4 data-i18n="footer_contact">İletişim</h4>
         <a href="mailto:info@ankalya.tr">info@ankalya.tr</a>
-        <a href="iletisim.html">WhatsApp &amp; Telefon</a>
+        <a href="iletisim.html" data-i18n="footer_whatsapp">WhatsApp &amp; Telefon</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Ankalya. Tüm hakları saklıdır.</span>
+      <span data-i18n="footer_copyright">&copy; 2026 Ankalya. Tüm hakları saklıdır.</span>
       <span>Muratpaşa, Antalya</span>
     </div>
   </div>
