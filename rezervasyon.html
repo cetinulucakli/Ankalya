@@ -13,7 +13,7 @@
 <body>
 
 <header class="site-header">
-  <div class="promo-bar">Bu bir <strong>ön onay</strong> talebidir — ödeme alınmaz, ekibimiz size dönüş yapıp onaylar.</div>
+  <div class="promo-bar" data-i18n-html="promo_bar_booking">Bu bir <strong>ön onay</strong> talebidir — ödeme alınmaz, ekibimiz size dönüş yapıp onaylar.</div>
   <div class="nav-row">
     <a href="index.html" class="brand">
       <img src="assets/img/logo-mark.svg" class="brand-mark" alt="Ankalya logosu">
@@ -37,24 +37,51 @@
 
 <section class="hero" style="padding:44px 0 36px;">
   <div class="container">
-    <h1 style="font-size:32px;">Rezervasyon Ön Onay Talebi</h1>
-    <p class="lead">Tarihlerinizi ve iletişim bilgilerinizi gönderin — ekibimiz müsaitliği kontrol edip 24 saat içinde size dönüş yapsın. Bu aşamada herhangi bir ödeme alınmaz.</p>
+    <h1 style="font-size:32px;" data-i18n="rez_hero_title">Rezervasyon Ön Onay Talebi</h1>
+    <p class="lead" data-i18n="rez_hero_lead">Tarihlerinizi ve iletişim bilgilerinizi gönderin — ekibimiz müsaitliği kontrol edip 24 saat içinde size dönüş yapsın. Bu aşamada herhangi bir ödeme alınmaz.</p>
   </div>
 </section>
 
-<section class="section" style="padding-top:16px;">
+<section class="section" style="padding-top:0;padding-bottom:16px;">
+  <div class="container">
+    <form id="avail-search-form" class="form-card search-card">
+      <h2 class="search-card-title" data-i18n="search_section_title">Uygun Evinizi Bulun</h2>
+      <p class="search-card-sub" data-i18n="search_section_sub">Tarihlerinizi girin, o tarihlerde müsait olan evlerimizi görün.</p>
+      <div class="form-row search-row">
+        <div class="date-field">
+          <label data-i18n="search_dates_label">Giriş - Çıkış Tarihleri</label>
+          <button type="button" id="search-dates-toggle" class="date-range-btn">
+            <span id="search-dates-btn-text" data-i18n="search_dates_placeholder">Tarih seçin</span>
+          </button>
+          <div id="search-date-popover" class="date-range-popover"></div>
+        </div>
+        <div>
+          <label for="search-guests" data-i18n="search_guests_label">Misafir Sayısı</label>
+          <input type="number" id="search-guests" min="1" max="12" value="2">
+        </div>
+        <div class="search-btn-wrap">
+          <button type="submit" class="btn btn-primary" data-i18n="search_btn">Ara</button>
+        </div>
+      </div>
+      <div id="avail-search-status" class="search-status"></div>
+    </form>
+    <div id="avail-search-results"></div>
+  </div>
+</section>
+
+<section class="section" id="booking-form-section" style="padding-top:0;display:none;">
   <div class="container">
     <form id="booking-form" class="form-card">
       <div class="form-row">
-        <label for="apt">Hangi ev?</label>
+        <label for="apt" data-i18n="form_apt_label">Hangi ev?</label>
         <select id="apt" name="apartment" required>
-          <option value="">Seçiniz</option>
+          <option value="" data-i18n="form_apt_placeholder">Seçiniz</option>
           <option value="ankalya-1">Ankalya 1</option>
           <option value="ankalya-3">Ankalya 3</option>
           <option value="ankalya-5">Ankalya 5</option>
           <option value="ankalya-7">Ankalya 7</option>
           <option value="ankalya-24">Ankalya 24</option>
-          <option value="belirsiz">Emin değilim / hepsini göster</option>
+          <option value="belirsiz" data-i18n="form_apt_any">Emin değilim / hepsini göster</option>
         </select>
         <div id="apt-preview" style="display:none;margin-top:10px;align-items:center;gap:10px;">
           <img id="apt-preview-img" src="" alt="" style="width:64px;height:64px;object-fit:cover;border-radius:10px;">
@@ -64,50 +91,50 @@
 
       <div class="form-row two-col">
         <div>
-          <label for="checkin">Giriş Tarihi</label>
+          <label for="checkin" data-i18n="search_checkin_label">Giriş Tarihi</label>
           <input type="date" id="checkin" name="checkin" required>
         </div>
         <div>
-          <label for="checkout">Çıkış Tarihi</label>
+          <label for="checkout" data-i18n="search_checkout_label">Çıkış Tarihi</label>
           <input type="date" id="checkout" name="checkout" required>
         </div>
       </div>
 
       <div class="form-row two-col">
         <div>
-          <label for="guests">Misafir Sayısı</label>
+          <label for="guests" data-i18n="search_guests_label">Misafir Sayısı</label>
           <input type="number" id="guests" name="guests" min="1" max="12" value="2" required>
         </div>
         <div>
-          <label for="phone">Telefon / WhatsApp</label>
+          <label for="phone" data-i18n="form_phone_label">Telefon / WhatsApp</label>
           <input type="tel" id="phone" name="phone" placeholder="+90 5xx xxx xx xx" required>
         </div>
       </div>
 
       <div class="form-row">
-        <label for="name">Ad Soyad</label>
+        <label for="name" data-i18n="form_name_label">Ad Soyad</label>
         <input type="text" id="name" name="name" required>
       </div>
 
       <div class="form-row">
-        <label for="email">E-posta</label>
+        <label for="email" data-i18n="form_email_label">E-posta</label>
         <input type="email" id="email" name="email" required>
       </div>
 
       <div class="form-row">
-        <label for="note">Eklemek istediğiniz bir şey var mı?</label>
-        <textarea id="note" name="note" rows="4" placeholder="Özel bir talebiniz varsa buraya yazabilirsiniz"></textarea>
+        <label for="note" data-i18n="form_note_label">Eklemek istediğiniz bir şey var mı?</label>
+        <textarea id="note" name="note" rows="4" placeholder="Özel bir talebiniz varsa buraya yazabilirsiniz" data-i18n-placeholder="form_note_placeholder"></textarea>
       </div>
 
       <div class="form-row">
         <label style="display:flex;align-items:flex-start;gap:8px;font-weight:400;font-size:14px;">
           <input type="checkbox" id="kvkk-consent" name="kvkk_consent" value="evet" required style="margin-top:3px;">
-          <span><a href="gizlilik.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni'ni</a> okudum, kişisel verilerimin bu talebi değerlendirmek amacıyla işlenmesini ve tarafımla e-posta/telefon/WhatsApp yoluyla iletişime geçilmesini kabul ediyorum.</span>
+          <span><a href="gizlilik.html" target="_blank" rel="noopener" data-i18n="consent_link">KVKK Aydınlatma Metni'ni</a> <span data-i18n="consent_post">okudum, kişisel verilerimin bu talebi değerlendirmek amacıyla işlenmesini ve tarafımla e-posta/telefon/WhatsApp yoluyla iletişime geçilmesini kabul ediyorum.</span></span>
         </label>
       </div>
 
-      <button type="submit" class="btn btn-primary" style="width:100%;">Ön Onay Talebini Gönder</button>
-      <p class="form-note">Gönderdiğiniz bilgiler yalnızca rezervasyon talebinizi değerlendirmek için kullanılır, üçüncü taraflarla paylaşılmaz.</p>
+      <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="form_submit_btn">Ön Onay Talebini Gönder</button>
+      <p class="form-note" data-i18n="form_note_below">Gönderdiğiniz bilgiler yalnızca rezervasyon talebinizi değerlendirmek için kullanılır, üçüncü taraflarla paylaşılmaz.</p>
       <div id="form-msg"></div>
     </form>
   </div>
@@ -182,6 +209,12 @@
   if (aptParam && sel && [...sel.options].some(o => o.value === aptParam)) sel.value = aptParam;
   if (checkinParam) document.getElementById("checkin").value = checkinParam;
   if (checkoutParam) document.getElementById("checkout").value = checkoutParam;
+
+  // Bir dairenin kendi sayfasindaki musaitlik takviminden gelindiyse (apt/checkin/
+  // checkout URL parametreleri varsa), arama adimini atlayip formu direkt goster.
+  if (aptParam || checkinParam || checkoutParam) {
+    document.getElementById("booking-form-section").style.display = "";
+  }
 
   sel.addEventListener("change", updateAptPreview);
   updateAptPreview();
